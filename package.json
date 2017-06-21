@@ -2,13 +2,13 @@
   "name": "kbox_utils",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mec Rawlings",
   "license": "coffee",
+  "preferGlobal": true,
   "bin": {
-	  "kbox-utils": "bin/index.js"
+	  "kbox-utils": "bin/kbox-utils.js"
 	}
 }
