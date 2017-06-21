@@ -9,7 +9,7 @@ Only runs on Mac OS X as relies on the `open` command line tool, sorry.
 You'll need to install the tool globally so you can access it from your dev environemnts:
 
 ```
-npm install -g @mec/kbox-utils
+npm install git://github.com/mec/kbox-utils -g
 ```
 
 ## Use
