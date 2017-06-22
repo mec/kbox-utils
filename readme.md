@@ -1,6 +1,6 @@
 # kbox-utils
 
-A tiny utility for working with Kalabox, Pantheon and SequelPro.
+A tiny utility for working with [Kalabox](https://kalabox.io/), [Pantheon](https://pantheon.io) and [SequelPro](https://www.sequelpro.com/).
 
 Only runs on Mac OS X as relies on the `open` command line tool, sorry.
 
