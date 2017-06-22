@@ -1,8 +1,19 @@
 {
-  "name": "kbox_utils",
+  "name": "kbox-utils",
   "version": "0.0.1",
-  "license": "coffee",
+  "description": "A tiny utility for working with Kalabox, Pantheon and SequelPro.",
+  "main": "bin/kbox-utls.js",
   "bin": {
-	  "kbox-utils": "bin/kbox-utils.js"
-	}
+    "kbox-utils": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mec/kbox-utils.git"
+  },
+  "author": "Mec Rawlings",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mec/kbox-utils/issues"
+  },
+  "homepage": "https://github.com/mec/kbox-utils#readme"
 }
