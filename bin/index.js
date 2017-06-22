@@ -108,8 +108,6 @@ function createSequelProDoc(connection ) {
 </dict>
 </plist>
 `
-
-
 	fs.writeFile('/tmp/connect.spf', sequelProDoc , function (err) {
 	  if (err) return console.error(err)
     else {

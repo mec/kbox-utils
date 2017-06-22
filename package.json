@@ -2,7 +2,6 @@
   "name": "kbox_utils",
   "version": "0.0.1",
   "license": "coffee",
-  "preferGlobal": true,
   "bin": {
 	  "kbox-utils": "bin/kbox-utils.js"
 	}
