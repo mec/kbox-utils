@@ -4,7 +4,7 @@
   "description": "A tiny utility for working with Kalabox, Pantheon and SequelPro.",
   "main": "bin/kbox-utls.js",
   "bin": {
-    "kbox-utils": "/bin/index.js"
+    "kbox-utils": "bin/index.js"
   },
   "repository": {
     "type": "git",
