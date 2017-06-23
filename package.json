@@ -5,7 +5,7 @@
   "main": "bin/kbox-utls.js",
   "preferGlobal": true,
   "bin": {
-    "kbox-utils": "bin/index.js"
+    "kbox-utils": "bin/kbox-utils.js"
   },
   "repository": {
     "type": "git",
