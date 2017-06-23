@@ -9,7 +9,7 @@ Only runs on Mac OS X as relies on the `open` command line tool, sorry.
 You'll need to install the tool globally so you can access it from your dev environemnts:
 
 ```
-npm install -g git://github.com/mec/kbox-utils 
+npm install -g https://github.com/mec/kbox-utils
 ```
 
 You might need sudo depending on your setup.
@@ -26,12 +26,12 @@ You might need sudo depending on your setup.
 
 ### open in browser via https
 
-`kbox-util opens`
+`kbox-utils opens`
 
 ### open in browser via http
 
-`kbox-util open`
+`kbox-utils open`
 
 ### open database in SequelPro
 
-`kbox connectdb`
+`kbox-utils connectdb`
