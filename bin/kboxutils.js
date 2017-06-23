@@ -135,7 +135,11 @@ function createSequelProDoc(connection) {
       else {
         exec('open /tmp/connect.spf', function() {
           //delete the tmp file now
-          fs.unlink('/tmp/connect.spf')
+          fs.unlink('/tmp/connect.spf',  function(error, stdout, stderr){
+            if (error) {
+              console.error('Could not remove temporary datbase conneciton.')
+            }
+          })
         })
       }
 
