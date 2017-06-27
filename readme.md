@@ -6,7 +6,7 @@ Only runs on Mac OS X as relies on the `open` command line tool, sorry.
 
 ## Install
 
-You'll need to install the tool globally so you can access it from your dev environemnts:
+You'll need to install the tool globally so you can access it from your dev environments:
 
 ```
 npm install -g https://github.com/mec/kbox-utils
@@ -24,7 +24,7 @@ You might need sudo depending on your setup.
 
 ## Use
 
-The idea is to stop you having to copy and paste the various bits of config info out of the services object, you can:
+The idea is to stop you having to copy and paste the various bits of config info out of the kbox services response, you can:
 
 ### open in browser via https
 
@@ -36,4 +36,4 @@ The idea is to stop you having to copy and paste the various bits of config info
 
 ### open database in SequelPro
 
-`kbox-utils connectdb`
+`kbox-utils opendb`

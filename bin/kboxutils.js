@@ -57,7 +57,7 @@ function parseServices (services) {
       case 'open':
         openInBrowser(connection, false)
         break
-      case 'connectdb':
+      case 'opendb':
         createSequelProDoc(connection)
         break
       default:
