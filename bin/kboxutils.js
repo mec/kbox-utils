@@ -2,6 +2,7 @@
 
 'use strict'
 const exec = require('child_process').exec
+
 const fs = require('fs')
 
 // get the argument
@@ -15,7 +16,7 @@ if (!action) {
 
 exec('kbox services', {
   cwd: process.cwd()
-}, function(error, stdout, stderr) {
+}, function (error, stdout, stderr) {
   if (error) {
     console.error('Something went wrong with kbox, are you in a Kalabox app environment?')
     process.exit(1)
@@ -30,34 +31,34 @@ exec('kbox services', {
   }
 })
 
-function parseServices(services) {
+function parseServices (services) {
   if (services !== 'App is not running.') {
     // create some variables to holding our stuff
     let connection
     let webAddress
     let dbConnection
     // loop over the servies array and locate the db and web items
-    services.forEach(function(item, index, services) {
-      if ( item.name === 'db') {  dbConnection = services[index] }
-      if ( item.name === 'web') {  webAddress = services[index] }
+    services.forEach(function (item, index, services) {
+      if (item.name === 'db') { dbConnection = services[index] }
+      if (item.name === 'web') { webAddress = services[index] }
     })
     // create object with our data
     connection = {
-      'web' : {
-        'secure' : webAddress.url[1],
-        'insecure' : webAddress.url[0],
+      'web': {
+        'secure': webAddress.url[1],
+        'insecure': webAddress.url[0]
       },
-      'db' : dbConnection.external_connection_info
+      'db': dbConnection.external_connection_info
     }
-    switch(action) {
+    switch (action) {
       case 'opens':
-        openInBrowser(connection, true);
+        openInBrowser(connection, true)
         break
       case 'open':
-        openInBrowser(connection, false);
+        openInBrowser(connection, false)
         break
       case 'connectdb':
-        createSequelProDoc(connection);
+        createSequelProDoc(connection)
         break
       default:
         console.error("Sorry, I don't know how to '" + action + "''")
@@ -68,20 +69,20 @@ function parseServices(services) {
   }
 }
 
-function openInBrowser(connection, secure) {
+function openInBrowser (connection, secure) {
   if (!connection.web) {
     console.error('Could not find web settings, check kbox services?')
     process.exit(1)
   } else {
     if (secure) {
-        exec('open ' + connection.web.secure)
+      exec('open ' + connection.web.secure)
     } else {
-        exec('open ' + connection.web.insecure)
+      exec('open ' + connection.web.insecure)
     }
   }
 }
 
-function createSequelProDoc(connection) {
+function createSequelProDoc (connection) {
   if (!connection.db) {
     console.error('Could not find database settings, check kbox services?')
     process.exit(1)
@@ -146,7 +147,7 @@ function createSequelProDoc(connection) {
     </dict>
     </plist>
     `
-    fs.writeFile('/tmp/connect.spf', sequelProDoc , function (err) {
+    fs.writeFile('/tmp/connect.spf', sequelProDoc, function (err) {
       if (err) return console.error(err)
       else {
         exec('open /tmp/connect.spf')

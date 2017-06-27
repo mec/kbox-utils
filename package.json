@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/mec/kbox-utils/issues"
   },
-  "homepage": "https://github.com/mec/kbox-utils#readme"
+  "homepage": "https://github.com/mec/kbox-utils#readme",
+  "devDependencies": {
+    "standard": "^10.0.2"
+  }
 }
