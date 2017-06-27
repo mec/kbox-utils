@@ -24,6 +24,8 @@ You might need sudo depending on your setup.
 
 ## Use
 
+The idea is to stop you having to copy and paste the various bits of config info out of the services object, you can:
+
 ### open in browser via https
 
 `kbox-utils opens`
